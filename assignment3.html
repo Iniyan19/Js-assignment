@@ -1,0 +1,27 @@
+<html>
+    <title>Assignment</title>
+    <body>
+        <h2>This is assignment 3 of day 2</h2>
+        <script>
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth()+1;
+            var yyyy = today.getUTCFullYear();
+            if(dd<10)
+            {
+                dd = "0"+dd;
+            }
+            if(mm<10)
+            {
+                mm = "0"+mm;
+            }
+            document.write(mm+"-"+dd+"-"+yyyy);
+            document.write("<br>")
+            document.write(mm+"/"+dd+"/"+yyyy)
+            document.write("<br>")
+            document.write(dd+"-"+mm+"-"+yyyy)
+            document.write("<br>")
+            document.write(dd+"/"+mm+"/"+yyyy)
+        </script>
+    </body>
+</html>
