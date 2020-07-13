@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Assignment</title>
+    </head>
+    <body>
+        <h2>This is the first assignment for day 2</h2>
+        <script>
+        var today = new Date();
+        var day = today.getDay();
+        var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+        document.write("Today is : "+ daylist[day]+'.');
+        var hour = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+        var am_or_pm = (hour>=12)? "PM": "AM";
+        hour =(hour>=12)? hour - 12: hour;
+        if(hour ==0 && am_or_pm=='PM')
+        {
+            if (min == 0 && sec == 0)
+            {
+                hour = 12;
+                am_or_pm = "Noon"
+            }
+            else
+            {
+                hour = 12;
+                am_or_pm ='PM'
+            }
+        }
+        if(hour ==0 && am_or_pm=='AM')
+        {
+            if (min == 0 && sec == 0)
+            {
+                hour = 12;
+                am_or_pm = "Midnight"
+            }
+            else
+            {
+                hour = 12;
+                am_or_pm ='AM'
+            }
+        }
+        document.write("<br>");
+        document.write("current time is : "+ hour + am_or_pm+" : "+min+" : "+sec);
+        </script>
+    
+    </body>
+</html>
