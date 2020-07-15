@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day-1_Assignment</title>
+</head>
+<body>
+<h2>Various methods in console function</h2>
+<br>
+<p>console.log():</p>
+<p>This method is used to output to the console,the string,array,number,code or anything inside the()will be displayed on the console</p>
+<p>Example: </p>
+<p>console.log("Hello there!"),this will be printed on the console as :</p>
+<script>console.log("hello there!")</script>
+<p>console.error():</p>
+<p>his is used to log error messages to the console, it is useful in testing the code.</p>
+<p>example:</p>
+<p>console.error(' An error occured.') this displays a text in red saying An error occured.</p>
+<script>console.error('An error occured')</script>
+<p>console.warn():</p>
+<p>This is used to log warning message to the console, it is displayed in yellow color.</p>
+<p>example:</p>
+<p>console.warn('Warning!!')</p>
+<script>console.warn('Warning!!')</script>
+<p>console.time() and console.timeEnd():</p>
+<p>This is used to find the running time of a block of code, the console.time() is used to denote the start of the timer and console.timeEnd() to denote the end of the timer. The time elapsed is shown in milpseconds.</p>
+<p>Example:</p>
+<p>
+    console.time();
+    for(i=0;i<1000;i++){
+    <br>console.log("hi")</br>
+    }
+    <br>console.timeEnd();</br>
+</p>
+<script>
+    console.time();
+    for(i=0;i<1000;i++){
+    console.log("hi")
+    }
+    console.timeEnd();
+</script>
+<p>console.table():</p>
+<p>This method allows us to generate a table inside a console. The input must be an array or an object which will be shown as a table.</p>
+<p>example:</p>
+<p>console.table({'a':1, 'b':2})</p>
+<script>console.table({'a':1, 'b':2})</script>
+</body>
+</html>
