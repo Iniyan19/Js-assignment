@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day_2-Assignment</title>
+</head>
+<body>
+    <h2>String Length</h2>
+    <p>The length property returns the length of a string:<br>
+        var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";<br>
+        var sln = txt.length<br>
+        console.log("string length :",sln)<br>
+    </p>
+    <script>
+        var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var sln = txt.length
+        console.log("string length :",sln)
+    </script>
+    <h2>indexOf() and lastIndexOf()</h2>
+    <p>The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:</p>
+    var str = "Please locate where 'locate' occurs!";<br>
+        var pos = str.indexOf("locate");<br>
+        console.log("The location is : ",pos)<br>
+    <script>
+        var str = "Please locate where 'locate' occurs!";
+        var pos = str.indexOf("locate");
+        console.log("The location is : ",pos)
+    </script>
+    <p>The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:</p>
+    <script>
+        var str = "Please locate where 'locate' occurs!";
+        var pos = str.lastIndexOf("locate");
+        console.log("The location is : ",pos)
+    </script>
+    <P>var str = "Please locate where 'locate' occurs!";<br>
+        var pos = str.lastIndexOf("locate");<br>
+        console.log("The location is : ",pos);<br>
+    </P>
+    <h2>slice() , substring() , substr()</h2>
+    <P>slice() extracts a part of a string and returns the extracted part in a new string.<br>
+        The method takes 2 parameters: the start position, and the end position (end not included).<br>
+        This example slices out a portion of a string from position 6 to position 12:<br>
+        var str = "Apple,Banana,Kiwi";<br>
+        var res = str.slice(6, 12);<br>
+        console.log("sliced string : ", res)<br>
+        substring() is similar to slice().<br>
+        The difference is that substring() cannot accept negative indexes.<br>
+        var str = "Apple, Banana, Kiwi";<br>
+        var res = str.substring(6, 12);<br>
+        console.log("sliced string : ", res)<br>
+        substr() is similar to slice().<br>
+        The difference is that the second parameter specifies the length of the extracted part.<br>
+        var str = "Apple, Banana, Kiwi";<br>
+        var res = str.substr(6, 6);<br>
+        <br>
+    </P>
+    <script>
+         var str = "Apple,Banana,Kiwi";
+         var res = str.slice(6, 12);
+         console.log("sliced string : ", res);
+    </script>
+        <script>
+            var str = "Apple,Banana,Kiwi";
+            var res = str.substring(6, 12);
+            console.log("sliced string : ", res);
+       </script>
+       <script>
+        var str = "Apple,Banana,Kiwi";
+        var res = str.substr(6, 6);
+        console.log("sliced string : ", res);
+   </script>
+    <h2>Replace()</h2>
+    <p>The replace() method replaces a specified value with another value in a string:<br>
+        By default, the replace() method replaces only the first match,<br>
+        By default, the replace() method is case sensitive.<br>
+        To replace case insensitive, use a regular expression with an /i flag (insensitive)<br>
+        To replace all matches, use a regular expression with a /g flag (global match):<br>
+        str = "Please visit Microsoft!";<br>
+        var n = str.replace(/MICROSOFT/i, "Apple");<br>
+        console.log(n)<br>
+        <script>
+            str = "Please visit Microsoft!";
+            var n = str.replace(/MICROSOFT/i, "Apple");
+            console.log(n)
+        </script>
+        str = "Please visit Microsoft by Microsoft!";<br>
+        var n = str.replace(/Microsoft/g, "Apple");<br>
+        console.log(n)<br>
+        <script>
+            str = "Please visit Microsoft! by Microsoft";
+            var n = str.replace(/Microsoft/g, "Apple");
+            console.log(n)
+        </script>
+        <h2>Upper and lower case</h2>
+        <p>A string is converted to upper case with toUpperCase():<br>
+            var text1 = "Hello World!";<br>
+            var text2 = text1.toUpperCase();<br>
+            A string is converted to lower case with toLowerCase():<br>
+            var text1 = "Hello World!";<br>     
+            var text2 = text1.toLowerCase();<br> 
+        </p>
+        <script>
+            var text1 = "Hello World!";       // String
+            var text2 = text1.toUpperCase();  // text2 is text1 converted to upper
+            console.log(text2)
+        </script>
+        <script>
+            var text1 = "Hello World!";       // String
+            var text2 = text1.toLowerCase();  // text2 is text1 converted to lower
+            console.log(text2)
+        </script>
+        <h2>concat() method</h2>
+        concat() joins two or more strings:<br>
+        var text1 = "Hello";<br>
+        var text2 = "World";<br>
+        var text3 = text1.concat(" ", text2);<br>
+        console.log(text3)<br>
+        <script>
+            var text1 = "Hello";
+            var text2 = "World";
+            var text3 = text1.concat(" ", text2);
+            console.log("concated text : ",text3)
+        </script>
+        <h2>String.trim() method</h2>
+        The trim() method removes whitespace from both sides of a string:<br>
+        var str = "       Hello World!        ";<br>
+        console.log("trimmed string : ",str.trim());<br>
+        <script>
+            var str = "       Hello World!        ";
+            console.log("trimmed string : ",str.trim());
+        </script>
+        <h2>The charAt() Method,The charCodeAt() Method</h2>
+        The charAt() method returns the character at a specified index (position) in a string:<br>
+        var str = "HELLO WORLD";<br>
+        console.log(str.charAt(0));<br>
+        <script>
+            var str = "HELLO WORLD";
+            console.log(str.charAt(0));
+        </script>
+        The charCodeAt() method returns the unicode of the character at a specified index in a string:<br>
+        The method returns a UTF-16 code (an integer between 0 and 65535).<br>
+        var str = "HELLO WORLD";<br>
+        str.charCodeAt(0);<br>
+        <script>
+            var str = "HELLO WORLD";
+            console.log(str.charCodeAt(0));
+        </script>      
+    </p>
+
+</body>
+</html>
