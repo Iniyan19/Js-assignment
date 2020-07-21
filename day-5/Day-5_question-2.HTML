@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <script>
+        class User{
+            constructor(name,age,email){
+                this.name = name;
+                this.age = age;
+                this.email = email;
+                this.elucoins = 0;
+                this.courses =[]
+            }
+            login(){
+                console.log(`${this.name} has logged in.`)
+                return this;
+            }
+            logout(){
+                console.log(`${this.name} has logged out.`)
+                return this;
+            }
+            wallet(){
+                console.log(`${this.name} has ${this.elucoins} elucoins in the wallet.`)
+                return this;
+            }
+        }
+        class Moderator extends User{
+            addcoin(user,coinadd){
+                user.elucoins = user.elucoins + coinadd;
+                console.log(`${user.name} has ${user.elucoins} elucoins`);
+                return this;
+            }
+            remcoin(user,coinrem){
+                user.elucoins = user.elucoins - coinrem;
+                console.log(`${user.name} has ${user.elucoins} elucoins`)
+                return this;
+            }
+
+
+        }
+        class Admin extends Moderator{
+            addcourse(user,course){
+                user.courses.push(course);
+                console.log(`${user.name} is enrolled in ${user.courses} course.`)
+            }
+            remcourse(user,course){
+                let arr = user.courses;
+                arr = arr.filter(el=> el != course);
+                user.courses= arr;
+                console.log(`${course} has been removed from courses of ${user.name}`)
+            }
+        }
+        let user1 = new User('arun',20,'a@gmail.com')
+        let user2 = new User('bane',22,'b@gmail.com')
+        users =[user1,user2]
+        let mod = new Moderator("carl",25,'c@gmail.com')
+        let admin = new Admin("Duke",25,"d@gmai.com")
+        
+        mod.login().addcoin(user2,5);
+        mod.remcoin(user2,2)
+        admin.addcourse(user1,'python')
+        admin.addcourse(user1,'Javascript')
+        admin.remcourse(user1,'python')
+        console.log(user1.courses)
+
+    </script>
+    
+</body>
+</html>

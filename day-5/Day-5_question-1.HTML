@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <script>
+        input = prompt("Enter a positive number :")
+        num = parseInt(input)
+        let array = []
+        for(i=1;i<=num;i++){
+            array.push(i)
+        }
+        let oddsquare = array.filter(el=>el%2!=0).map(el=>Math.pow(el,3));
+        console.log(oddsquare)
+    </script>
+</body>
+</html>
