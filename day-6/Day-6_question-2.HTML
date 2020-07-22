@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <div id="heading">
+        <p><em>Question 2:</em><br>
+            Write a program that will display the multiplication table of a number on the webpage in a proper
+            format. Take the input from the user.
+            </p>
+    </div>
+   
+    <div id="table">
+        <ul id="list">
+
+        </ul>
+
+    </div>
+    <script>
+        input = prompt("Enter a number:");
+        num = parseInt(input);
+        const list = document.querySelector('#list');
+        //console.log(list);
+        for (let index = 1; index <= 10; index++) {
+           list.innerHTML += `<li>${num}x${index} = ${num*index}` 
+        }
+    </script>
+</body>
+</html>

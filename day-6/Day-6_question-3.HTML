@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="question-3.css">
+    <title>Assignment</title>
+</head>
+<body>
+    <button id="dark">Switch to dark mode</button>
+        <h2 id="title">-Day-6 assignment-</h2>
+        <h4 id ="time"></h4>
+    <div id="question">
+        <p>
+            <em>Question 3:</em>
+            <br>
+            Make a webpage that will ask the name of the user. Then will display a welcome message on the
+            webpage. Also the webpage should also have a clock.
+            <br>
+            Using the toggle method of classList add a dark mode feature to the website.
+
+        </p>
+    </div>
+    <script>
+        const name = prompt("Enter your name:","newbie")
+        const title = document.getElementById("title");
+        title.innerText +=`${name}`
+        const button = document.getElementById("dark")
+        button.onclick = ()=>{
+            document.body.classList.toggle('black');
+        }
+        const ctime = document.getElementById("time");
+        function clock(){
+            let date = new Date();
+            let time = date.toLocaleTimeString();
+            ctime.innerText = time;
+        }
+        setInterval(clock,1000);
+    </script>
+</body>
+</html>
