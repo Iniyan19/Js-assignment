@@ -1,0 +1,36 @@
+header{
+    padding:2em;
+    background-color: lightblue;
+    margin-top: 2em;
+    text-align: center;
+    color: white;
+    border-radius: 2em;
+}
+.quote{
+    font-size: 2em;
+}
+.btn-large{
+    margin: 0.5em;
+    box-shadow: steelblue;
+    border-radius: 2em;
+    font-size: 1.25rem;
+    color: honeydew;
+    border: 0;
+}
+.card{
+    text-align: center;
+    width: 45em;
+    background-color: rgb(143, 182, 197);
+    box-shadow: slategrey;
+    border-radius: 2em;
+}
+.new-quote-button{
+    background-color: lightblue;
+    border-color: black;
+}
+#button:hover{
+    background-color: rgb(44, 149, 190);
+}
+body{
+    background-color:skyblue;
+}
